@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@consumet/extensions": "https://github.com/consumet/consumet.ts",
     "autoprefixer": "10.4.14",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.7",
