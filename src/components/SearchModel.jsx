@@ -120,7 +120,7 @@ export default SearchModel;
 const SearchOption = ({searhTerm,searchTermOption}) =>{
 
 const { isLoading, error, data } = useQuery('search', () =>
-  fetch(`http://localhost:3000/api/${searchTermOption}?search=${searhTerm}`).then(res =>
+  fetch(`/api/${searchTermOption}?search=${searhTerm}`).then(res =>
     res.json()
   ).then(res => res.results)
 )

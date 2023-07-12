@@ -13,7 +13,7 @@ const InfoCard = ({id,searchParams}) => {
 
 
     const { isLoading, error, data } = useQuery('anime', () =>
-    fetch(`http://localhost:3000/api/${searchTermOption}?info=${searchId}`).then(res =>
+    fetch(`/api/${searchTermOption}?info=${searchId}`).then(res =>
       res.json()
     )
   )

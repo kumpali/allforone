@@ -11,7 +11,7 @@ const WatchCard = ({id, searchParams}) => {
     const playerRef = React.useRef(null);
 
     const { isLoading, error, data } = useQuery('anime', () =>
-    fetch(`http://localhost:3000/api/${searchTermOption}?watch=${searchTermOption=="anime"?watchId:searchId}&id=${watchId}`).then(res =>
+    fetch(`/api/${searchTermOption}?watch=${searchTermOption=="anime"?watchId:searchId}&id=${watchId}`).then(res =>
       res.json()
       
     ).then(res=>res.sources)
