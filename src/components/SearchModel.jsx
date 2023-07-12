@@ -90,12 +90,15 @@ import Link from 'next/link'
                         </button>
                         </div>
 
-                      <div className='w-full flex mb-10'>    
-                        <input  type="text" onChange={(e)=>setSearchTerm(e.target.value)} placeholder="Search" className="input input-bordered w-24 md:w-auto grow rounded-r-none outline-none hover:outline-none focus:outline-none" />
+                      <form onSubmit={(e)=>{
+                        e.preventDefault()
+                        setSearchLimit(false)
+                        }} className='w-full flex mb-10'>    
+                        <input  type="text" onChange={(e)=>setSearchTerm(e.target.value)} placeholder="Search" className=" input input-bordered w-24 md:w-auto grow rounded-r-none outline-none hover:outline-none focus:outline-none text-gray-600" />
                         <button onClick={()=>setSearchLimit(false)} className='btn btn-primary rounded-l-none'>
                           <MagnifyingGlassCircleIcon className='h-6 w-6'/>
                         </button>
-                      </div>
+                      </form>
                       {searchLimit?<span className="loading loading-dots loading-lg flex justify-center self-center"></span>:
                       <SearchOption searhTerm={searhTerm} searchTermOption={searchTermOption}/>
                       }
@@ -151,7 +154,7 @@ if(data){
                               <div className="w-[380px] flex items-center mx-auto py-3">
                                 <div className="flex-grow">
                                     <Link href={`/info/${title}?searchId=${id}&searchTermOption=${searchTermOption}`}>
-                                      <h3 className="text-2xl font-semibold dark:text-gray-400">
+                                      <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
                                         {title}
                                       </h3>
                                     </Link>
