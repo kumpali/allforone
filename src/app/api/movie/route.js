@@ -31,6 +31,7 @@ export async function GET(req) {
         return NextResponse.json(res)
     }
 
+
     return NextResponse.json("your query options are [search, info, watch]")
 
 

@@ -18,7 +18,7 @@ const WatchCard = ({id, searchParams}) => {
   )
 
   
-  if (isLoading | data == undefined) return <span className="loading loading-dots loading-lg"></span>
+  if (isLoading | data == undefined) return <span className="loading loading-dots loading-lg absolute left-[50%] top-[50%]"></span>
   
   if (error) return 'An error has occurred: ' + error.message
   if(data){
