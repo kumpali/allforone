@@ -58,30 +58,29 @@ if (isLoading | data == undefined) return <span className="loading loading-dots 
 
 if (error) return 'An error has occurred: ' + error.message
 if(data){
-  console.log(data)
 
 return(
   <>
   <h1 className='my-12 text-2xl ml-12'>
       Tranding Movies
     </h1>
-  <div className='flex w-full gap-4 flex-wrap bg-base-300 '>
+  <div className=' w-full grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:flex flex-wrap gap-4 bg-base-300 px-5'>
       {
         data.trendingMovies.map(({id,image,title,releaseDate})=>(
 
-          <div key={id} className="min-w-[400px] w-auto grow rounded-lg bg-white dark:bg-slate-900 pb-2">
-          <div className="relative min-w-[380px] w-ful h-[250px] rounded-lg mx-auto overflow-hidden">
-            <img className="absolute w-full object-cover rounded-lg" src={image} alt=""/>
+          <div key={id} className="w-auto min-w-[200px] 2xl:max-w-[400px] grow rounded-lg bg-white dark:bg-slate-900 pb-2">
+          <div className="relative  w-full h-[250px] rounded-t mx-auto overflow-hidden">
+            <img className="absolute w-full object-cover rounded-t" src={image} alt=""/>
             
           </div>
-          <div className="w-[380px] flex items-center mx-auto py-3">
-            <div className="flex-grow">
+          <div className="w-[200px] flex items-center mx-auto py-3">
+            <div className="">
                 <Link href={`/info/${title}?searchId=${id}&searchTermOption=movie`}>
-                  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
+                  <h3 className="w-full break-words font-semibold text-gray-700 dark:text-gray-400">
                     {title}
                   </h3>
                 </Link>
-              <p className="ext-sm text-gray-600">{releaseDate}</p>
+              <p className="text-sm text-gray-600">{releaseDate}</p>
             </div>
           </div>
         
@@ -94,23 +93,23 @@ return(
       <h1 className='my-12 text-2xl ml-12'>
       Tranding Tv
     </h1>
-  <div className='flex w-full gap-4 flex-wrap bg-base-300 '>
+  <div className=' w-full grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:flex flex-wrap gap-4 bg-base-300 px-5'>
       {
         data.trandingTv.map(({id,image,title,releaseDate})=>(
 
-          <div key={id} className="min-w-[400px] w-auto grow rounded-lg bg-white dark:bg-slate-900 pb-2">
-          <div className="relative min-w-[380px] w-ful h-[250px] rounded-lg mx-auto overflow-hidden">
-            <img className="absolute w-full object-cover rounded-lg" src={image} alt=""/>
+          <div key={id} className="w-auto min-w-[200px] 2xl:max-w-[400px] grow rounded-lg bg-white dark:bg-slate-900 pb-2">
+          <div className="relative  w-full h-[250px] rounded-t mx-auto overflow-hidden">
+            <img className="absolute w-full object-cover rounded-t" src={image} alt=""/>
             
           </div>
           <div className="w-[380px] flex items-center mx-auto py-3">
             <div className="flex-grow">
                 <Link href={`/info/${title}?searchId=${id}&searchTermOption=movie`}>
-                  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
+                  <h3 className="w-full break-words font-semibold text-gray-700 dark:text-gray-400">
                     {title}
                   </h3>
                 </Link>
-              <p className="ext-sm text-gray-600">{releaseDate}</p>
+              <p className="text-sm text-gray-600">{releaseDate}</p>
             </div>
           </div>
         
@@ -125,23 +124,23 @@ return(
     <h1 className='my-12 text-2xl ml-12'>
       Recent Movies
     </h1>
-  <div className='flex w-full gap-4 flex-wrap bg-base-300 '>
+  <div className=' w-full grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:flex flex-wrap gap-4 bg-base-300 px-5'>
       {
         data.recentMovies.map(({id,image,title,releaseDate})=>(
 
-          <div key={id} className="min-w-[400px] w-auto grow rounded-lg bg-white dark:bg-slate-900 pb-2">
-          <div className="relative min-w-[380px] w-ful h-[250px] rounded-lg mx-auto overflow-hidden">
-            <img className="absolute w-full object-cover rounded-lg" src={image} alt=""/>
+          <div key={id} className="w-auto min-w-[200px] 2xl:max-w-[400px] grow rounded-lg bg-white dark:bg-slate-900 pb-2">
+          <div className="relative  w-full h-[250px] rounded-t mx-auto overflow-hidden">
+            <img className="absolute w-full object-cover rounded-t" src={image} alt=""/>
             
           </div>
           <div className="w-[380px] flex items-center mx-auto py-3">
             <div className="flex-grow">
                 <Link href={`/info/${title}?searchId=${id}&searchTermOption=movie`}>
-                  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
+                  <h3 className="w-full break-words font-semibold text-gray-700 dark:text-gray-400">
                     {title}
                   </h3>
                 </Link>
-              <p className="ext-sm text-gray-600">{releaseDate}</p>
+              <p className="text-sm text-gray-600">{releaseDate}</p>
             </div>
           </div>
         
@@ -153,23 +152,23 @@ return(
       <h1 className='my-12 text-2xl ml-12'>
       Recent TV Shows
     </h1>
-  <div className='flex w-full gap-4 flex-wrap bg-base-300 '>
+  <div className=' w-full grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:flex flex-wrap gap-4 bg-base-300 px-5'>
       {
         data.recentTv.map(({id,image,title,releaseDate})=>(
 
-          <div key={id} className="min-w-[400px] w-auto grow rounded-lg bg-white dark:bg-slate-900 pb-2">
-          <div className="relative min-w-[380px] w-ful h-[250px] rounded-lg mx-auto overflow-hidden">
-            <img className="absolute w-full object-cover rounded-lg" src={image} alt=""/>
+          <div key={id} className="w-auto min-w-[200px] 2xl:max-w-[400px] grow rounded-lg bg-white dark:bg-slate-900 pb-2">
+          <div className="relative  w-full h-[250px] rounded-t mx-auto overflow-hidden">
+            <img className="absolute w-full object-cover rounded-t" src={image} alt=""/>
             
           </div>
           <div className="w-[380px] flex items-center mx-auto py-3">
             <div className="flex-grow">
                 <Link href={`/info/${title}?searchId=${id}&searchTermOption=movie`}>
-                  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
+                  <h3 className="w-full break-words font-semibold text-gray-700 dark:text-gray-400">
                     {title}
                   </h3>
                 </Link>
-              <p className="ext-sm text-gray-600">{releaseDate}</p>
+              <p className="text-sm text-gray-600">{releaseDate}</p>
             </div>
           </div>
         
@@ -181,23 +180,23 @@ return(
       <h1 className='my-12 text-2xl ml-12'>
       Recent Animes
     </h1>
-  <div className='flex w-full gap-4 flex-wrap bg-base-300 '>
+  <div className=' w-full grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:flex flex-wrap gap-4 bg-base-300 px-5'>
       {
         data.recentEps.map(({id,image,title,releaseDate})=>(
 
-          <div key={id} className="min-w-[400px] w-auto grow rounded-lg bg-white dark:bg-slate-900 pb-2">
-          <div className="relative min-w-[380px] w-ful h-[250px] rounded-lg mx-auto overflow-hidden">
-            <img className="absolute w-full object-cover rounded-lg" src={image} alt=""/>
+          <div key={id} className="w-auto min-w-[200px] 2xl:max-w-[400px] grow rounded-lg bg-white dark:bg-slate-900 pb-2">
+          <div className="relative  w-full h-[250px] rounded-t mx-auto overflow-hidden">
+            <img className="absolute w-full object-cover rounded-t" src={image} alt=""/>
             
           </div>
           <div className="w-[380px] flex items-center mx-auto py-3">
             <div className="flex-grow">
                 <Link href={`/info/${title}?searchId=${id}&searchTermOption=anime`}>
-                  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
+                  <h3 className="w-full break-words font-semibold text-gray-700 dark:text-gray-400">
                     {title}
                   </h3>
                 </Link>
-              <p className="ext-sm text-gray-600">{releaseDate}</p>
+              <p className="text-sm text-gray-600">{releaseDate}</p>
             </div>
           </div>
         
@@ -210,23 +209,23 @@ return(
       <h1 className='my-12 text-2xl ml-12'>
       Top Airing Anime
     </h1>
-  <div className='flex w-full gap-4 flex-wrap bg-base-300 '>
+  <div className=' w-full grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:flex flex-wrap gap-4 bg-base-300 px-5'>
       {
         data.topAiringAnime.map(({id,image,title,releaseDate})=>(
 
-          <div key={id} className="min-w-[400px] w-auto grow rounded-lg bg-white dark:bg-slate-900 pb-2">
-          <div className="relative min-w-[380px] w-ful h-[250px] rounded-lg mx-auto overflow-hidden">
-            <img className="absolute w-full object-cover rounded-lg" src={image} alt=""/>
+          <div key={id} className="w-auto min-w-[200px] 2xl:max-w-[400px] grow rounded-lg bg-white dark:bg-slate-900 pb-2">
+          <div className="relative  w-full h-[250px] rounded-t mx-auto overflow-hidden">
+            <img className="absolute w-full object-cover rounded-t" src={image} alt=""/>
             
           </div>
           <div className="w-[380px] flex items-center mx-auto py-3">
             <div className="flex-grow">
                 <Link href={`/info/${title}?searchId=${id}&searchTermOption=anime`}>
-                  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
+                  <h3 className="w-full break-words font-semibold text-gray-700 dark:text-gray-400">
                     {title}
                   </h3>
                 </Link>
-              <p className="ext-sm text-gray-600">{releaseDate}</p>
+              <p className="text-sm text-gray-600">{releaseDate}</p>
             </div>
           </div>
         
